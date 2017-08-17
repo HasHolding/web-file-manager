@@ -4,6 +4,7 @@ MAINTAINER "Levent SAGIROGLU" <LSagiroglu@gmail.com>
 # https://github.com/hacdias/filemanager
 
 VOLUME /srv
+VOLUME /etc
 
 COPY filemanager /bin/filemanager
 COPY config.json /etc/filemanager/config.json

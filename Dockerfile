@@ -1,21 +1,12 @@
-FROM alpine:latest
-
+FROM alpine:latest 
 MAINTAINER "Levent SAGIROGLU" <LSagiroglu@gmail.com>
-# Henrique Dias - Web File Manager 
-# https://github.com/hacdias/filemanager
+# Henrique Dias - Web File Manager https://github.com/hacdias/filemanager
 
-ENV FM_ROOT "/"
-
-VOLUME /srv
-VOLUME /etc
-
-COPY filemanager /bin/filemanager
-#COPY config.json /etc/filemanager/config.json
-COPY README.md /srv/README.md
-
-EXPOSE 80
-
-ENTRYPOINT ["/bin/filemanager"]
-CMD ["-p", "80", "-s", "${FM_ROOT}", "-d", "/etc/fm.db" ]
-#CMD ["--config", "/etc/filemanager/config.json"]
+VOLUME /srv 
+ENV FM_ROOT "/" 
+COPY entrypoint.sh /bin/entrypoint.sh 
+COPY filemanager /bin/filemanager 
+COPY README.md /srv/README.md 
+EXPOSE 80 
+ENTRYPOINT ["/bin/entrypoint.sh"]
 

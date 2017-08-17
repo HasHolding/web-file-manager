@@ -16,6 +16,6 @@ COPY README.md /srv/README.md
 EXPOSE 80
 
 ENTRYPOINT ["/bin/filemanager"]
-CMD ["-p", "80", "-s", "$FM_ROOT", "-d", "/etc/fm.db" ]
+CMD ["-p", "80", "-s", "{$FM_ROOT}", "-d", "/etc/fm.db" ]
 #CMD ["--config", "/etc/filemanager/config.json"]
 

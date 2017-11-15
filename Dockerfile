@@ -1,6 +1,6 @@
 FROM alpine:latest 
 MAINTAINER "Levent SAGIROGLU" <LSagiroglu@gmail.com>
-# Henrique Dias - Web File Manager https://github.com/hacdias/filemanager
+# Henrique Dias - Web File Manager - https://github.com/hacdias/filemanager
 
 VOLUME /srv 
 ENV FM_ROOT "/" 

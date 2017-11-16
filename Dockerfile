@@ -1,4 +1,4 @@
-FROM golang:alpine
+FROM golang:1.9.2-alpine
 ARG VERSION=v1.3.10
 RUN apk add --no-cache git 
 RUN apk add --update openssl

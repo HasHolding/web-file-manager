@@ -7,7 +7,7 @@ RUN wget https://github.com/hacdias/filemanager/archive/${VERSION}.tar.gz
 RUN tar -xvf ${VERSION}.tar.gz --strip 1
 RUN go get ./...
 WORKDIR /go/src/github.com/hacdias/filemanager/cmd/filemanager
-RUN CGO_ENABLED=0 go build -a -installsuffix cgo -ldflags "-X main.version=$(git tag -l --points-at HEAD)"
+RUN CGO_ENABLED=0 go build -a -installsuffix cgo -ldflags "-X main.version=${VERSION}"
 
 FROM alpine:latest 
 MAINTAINER "Levent SAGIROGLU" <LSagiroglu@gmail.com>

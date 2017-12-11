@@ -1,5 +1,5 @@
 FROM golang:1.9.2-alpine
-ARG VERSION=v1.3.10
+ARG VERSION=v1.3.11
 RUN apk add --no-cache git 
 RUN apk add --update openssl
 WORKDIR /go/src/github.com/hacdias/filemanager

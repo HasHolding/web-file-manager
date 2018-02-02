@@ -3,7 +3,7 @@ ARG VERSION=v1.5.0
 RUN apk add --no-cache git 
 RUN apk add --update openssl
 WORKDIR /go/src/github.com/hacdias/filemanager
-RUN wget https://github.com/hacdias/filemanager/archive/${VERSION}.tar.gz
+RUN wget https://github.com/filebrowser/filebrowser/archive/${VERSION}.tar.gz
 RUN tar -xvf ${VERSION}.tar.gz --strip 1
 RUN go get ./...
 WORKDIR /go/src/github.com/hacdias/filemanager/cmd/filemanager
